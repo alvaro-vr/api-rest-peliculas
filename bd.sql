@@ -14,7 +14,7 @@ CREATE TABLE pelicula (
 
 ALTER TABLE pelicula DROP INDEX UK_94jwam3f1prexp7hod5vg6dpv;
 
-LOAD DATA INFILE 'C:/peliculas.csv'
+LOAD DATA INFILE 'ruta/del/archivo/csv'
 INTO TABLE pelicula
 FIELDS TERMINATED BY ';'
 IGNORE 1 ROWS
