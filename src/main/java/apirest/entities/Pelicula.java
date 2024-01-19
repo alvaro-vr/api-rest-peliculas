@@ -26,6 +26,9 @@ public class Pelicula {
         this.actores = actores;
     }
 
+    public Pelicula() {
+    }
+
     public Long getId() {
         return id;
     }
