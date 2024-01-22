@@ -4,6 +4,7 @@ import apirest.entities.Pelicula;
 import apirest.repositories.PeliculaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,13 +28,8 @@ public class PeliculaServiceImpl implements PeliculaService {
     }
 
     @Override
-    public Optional<Pelicula> findByNombre(String nombre) {
-        return this.repository.findByTitulo(nombre);
-    }
-
-    @Override
-    public List<Pelicula> findByGenero(String genero) {
-        return this.repository.findByGenero(genero);
+    public List<Pelicula> findByArgs(String titulo, String genero, Long agno, String director, String actores) {
+        return this.repository.findByArgs(titulo, genero, agno, director, actores);
     }
 
     @Override

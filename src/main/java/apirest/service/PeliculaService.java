@@ -2,6 +2,7 @@ package apirest.service;
 
 import apirest.entities.Pelicula;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,8 +11,7 @@ public interface PeliculaService {
     // SELECT
     List<Pelicula> findAll();
     Optional<Pelicula> findById(Long id);
-    Optional<Pelicula> findByNombre(String nombre);
-    List<Pelicula> findByGenero(String genero);
+    List<Pelicula> findByArgs(String titulo, String genero, Long agno, String director, String actor);
 
     //CREATE UPDATE
     Pelicula save(Pelicula pelicula);
